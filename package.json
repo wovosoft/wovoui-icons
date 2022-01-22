@@ -37,5 +37,9 @@
   "bugs": {
     "url": "https://github.com/wovosoft/wovoui-icons/issues"
   },
-  "homepage": "https://github.com/wovosoft/wovoui-icons#readme"
+  "homepage": "https://github.com/wovosoft/wovoui-icons#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }
