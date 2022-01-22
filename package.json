@@ -20,5 +20,22 @@
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "author": "Narayan Adhikary",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wovosoft/wovoui-icons.git"
+  },
+  "keywords": [
+    "Bootstrap",
+    "5",
+    "Icons",
+    "Vue",
+    "3",
+    "wovoui",
+    "wovoui-icons"
+  ],
+  "bugs": {
+    "url": "https://github.com/wovosoft/wovoui-icons/issues"
+  },
+  "homepage": "https://github.com/wovosoft/wovoui-icons#readme"
 }
