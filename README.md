@@ -4,9 +4,6 @@
 from [Bootstrap 5 icons](https://icons.getbootstrap.com). There are almost 1522 icons.
 And in the future, if Bootstrap provides some more icons, those will be available too as soon as possible.
 
-[wovoui-icons](https://github.com/wovosoft/wovoui-icons) are wrapped in a separate package so that it's dependency can
-be optional.
-
 ## Getting Started
 
 [DOCUMENTATION](https://wovoui.netlify.app/icons)
