@@ -34,6 +34,10 @@ export default {
         fill: {
             type: String,
             default: () => "currentColor"
+        },
+        spin: {
+            type: Boolean,
+            default: false
         }
     },
     setup(props) {
@@ -45,9 +49,21 @@ export default {
                 {
                     ["text-" + props.variant]: props.variant,
                     ["bg-" + props.bgVariant]: props.bgVariant,
+                    "spin-icon": props.spin
                 }
             ])
         }
     }
 }
 </script>
+<style>
+@keyframes spin-animation {
+    to {
+        transform: rotate(360deg) /* rtl:ignore */;
+    }
+}
+
+.spin-icon {
+    animation: 0.75s linear infinite spin-animation;
+}
+</style>
