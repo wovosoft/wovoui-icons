@@ -4,57 +4,20 @@
 </svg>
 </template>
 
-<script>
+<script lang="ts" setup>
+import {props, sizeHeight, sizeWidth} from "../shared/useSetup";
 import {computed} from "vue";
 
-export default {
-    name: "CaretUpSquareFill",
-    props: {
-        width: {
-            type: [Number, String],
-            default: () => 16
-        },
-        height: {
-            type: [Number, String],
-            default: () => 16
-        },
-        size: {
-            type: Number,
-            default: () => 1
-        },
-        variant: {
-            type: String,
-            default: null
-        },
-        bgVariant: {
-            type: String,
-            default: null
-        },
-        fill: {
-            type: String,
-            default: () => "currentColor"
-        },
-        spin: {
-            type: Boolean,
-            default: false
-        }
-    },
-    setup(props) {
-        return {
-            sizeWidth: computed(() => props.width * props.size),
-            sizeHeight: computed(() => props.height * props.size),
-            classes: computed(() => [
-                "bi bi-caret-up-square-fill",
-                {
-                    ["text-" + props.variant]: props.variant,
-                    ["bg-" + props.bgVariant]: props.bgVariant,
-                    "spin-icon": props.spin
-                }
-            ])
-        }
+const classes = computed(() => [
+    "bi bi-caret-up-square-fill",
+    {
+        ["text-" + props.variant]: props.variant,
+        ["bg-" + props.bgVariant]: props.bgVariant,
+        "spin-icon": props.spin
     }
-}
+]);
 </script>
+
 <style>
 @keyframes spin-animation {
     to {
