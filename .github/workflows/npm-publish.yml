@@ -13,8 +13,8 @@ jobs:
     - name: node
       uses: actions/setup-node@v1.4.2
       with: # All of theses inputs are optional
-        node_version: 16
-        registry_url: https://registry.npmjs.org
+        node-version: 16
+        registry-url: https://registry.npmjs.org
     - name: publish
       run: npm publish --access public
       env: # More info about the environment variables in the README
