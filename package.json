@@ -2,6 +2,7 @@
   "name": "@wovosoft/wovoui-icons",
   "version": "0.0.5",
   "scripts": {
+    "test":"",
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
