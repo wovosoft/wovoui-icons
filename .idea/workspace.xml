@@ -4,7 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Testing Shell" />
+    <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Testing Shell">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.d.ts.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.d.ts.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Apple.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Apple.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Bank.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Bank.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/BoomboxFill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BoomboxFill.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cup.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CupFill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CupFill.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Pentagon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Pentagon.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PentagonFill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PentagonFill.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PentagonHalf.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PentagonHalf.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/PiggyBankFill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PiggyBankFill.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Projector.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Projector.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Screwdriver.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Screwdriver.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SendFill.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SendFill.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tools.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tools.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/XLg.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/XLg.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/generate_icons.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/generate_icons.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,6 +89,7 @@
       <workItem from="1658982915438" duration="3986000" />
       <workItem from="1658989277941" duration="149000" />
       <workItem from="1658989713791" duration="88000" />
+      <workItem from="1658989921729" duration="522000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658922819230</created>
