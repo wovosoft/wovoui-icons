@@ -13,6 +13,9 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org/'
+          run: |
+            echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+            cat .npmrc
       - name: Install dependencies and build 🔧
         run: npm install && npm run build
       - name: Publish package on NPM 📦
