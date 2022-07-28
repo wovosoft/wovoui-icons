@@ -1,1 +1,1 @@
-console.log("Executing. Automation will be done here using js function")
+console.log(process.env.NODE_AUTH_TOKEN)
