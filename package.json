@@ -41,11 +41,9 @@
     "url": "git+https://github.com/wovosoft/wovoui-icons.git"
   },
   "keywords": [
-    "Bootstrap",
-    "5",
+    "Bootstrap 5",
     "Icons",
-    "Vue",
-    "3",
+    "Vue 3",
     "wovoui",
     "wovoui-icons"
   ],
