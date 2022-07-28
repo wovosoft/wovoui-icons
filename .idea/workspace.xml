@@ -7,7 +7,6 @@
     <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Testing Shell">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,8 @@
       <workItem from="1658989921729" duration="582000" />
       <workItem from="1658990805325" duration="10789000" />
       <workItem from="1659004320225" duration="83000" />
-      <workItem from="1659005024416" duration="42000" />
+      <workItem from="1659005024416" duration="400000" />
+      <workItem from="1659005555737" duration="12000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658922819230</created>
