@@ -28,7 +28,7 @@
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "exports": {
-    "./src/index": "./src/index.js",
+    "./src/index": "./src/index.ts",
     "./dist/style": "./dist/style.css",
     ".": {
       "import": "./dist/index.es.js",

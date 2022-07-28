@@ -18,9 +18,9 @@ export default defineConfig({
         },
         rollupOptions: {
             external: ['vue'],
-            input: {
-                demo: path.resolve(__dirname, 'docs/app.ts')
-            },
+            // input: {
+            //     demo: path.resolve(__dirname, 'docs/app.ts')
+            // },
             output: {
                 globals: {
                     vue: 'Vue'
