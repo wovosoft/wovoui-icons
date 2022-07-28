@@ -28,6 +28,8 @@
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "exports": {
+    "./src/index": "./src/index.js",
+    "./dist/style": "./dist/style.css",
     ".": {
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
