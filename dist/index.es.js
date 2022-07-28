@@ -57300,6 +57300,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const props2 = __props;
     const classes = computed(() => ({
+      "bi": true,
       ["bi-" + props2.icon]: props2.icon,
       ["text-" + props2.variant]: props2.variant,
       ["bg-" + props2.bgVariant]: props2.bgVariant,

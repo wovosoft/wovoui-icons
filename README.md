@@ -1,26 +1,12 @@
 # Bootstrap Icons
 
 [wovoui-icons](https://github.com/wovosoft/wovoui-icons) are imported
-from [Bootstrap 5 icons](https://icons.getbootstrap.com). There are almost 1522 icons.
+from [Bootstrap 5 icons](https://icons.getbootstrap.com). There are more than 1800 icons.
 And in the future, if Bootstrap provides some more icons, those will be available too as soon as possible.
 
 ## Getting Started
 
 [DOCUMENTATION](https://wovoui.netlify.app/icons)
-
-Of-course You can use the icons using the provided [methods](https://icons.getbootstrap.com/#install) of [Bootstrap 5](https://icons.getbootstrap.com). For example,
-
-```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
-```
-
-```scss
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
-```
-
-```javascript
-import "bootstrap-icons"
-```
 
 ## Installation
 
@@ -36,7 +22,9 @@ npm install @wovosoft/wovoui-icons
 yarn add @wovosoft/wovoui-icons
 ```
 
-## How to Use
+## Using Icons as Vue Component
+
+Icon Components use SVGs provided by bootstrap-icons. So, importing bootstrap-icon style is optional.
 
 ```vue
 
@@ -52,3 +40,32 @@ export default {
 }
 </script>
 ```
+
+## Using Icons by CSS
+
+```html
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+```
+
+```scss
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+```
+
+```javascript
+import "bootstrap-icons"
+```
+
+```vue
+
+<template>
+    <Bi icon="alarm"/>
+</template>
+<script>
+import {Bi} from "@wovosoft/wovoui-icons";
+
+export default {
+    components: {Bi}
+}
+</script>
+``` 

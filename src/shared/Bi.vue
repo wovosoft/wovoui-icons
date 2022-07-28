@@ -26,6 +26,7 @@ const props = defineProps({
 });
 
 const classes = computed(() => ({
+    "bi": true,
     ["bi-" + props.icon]: props.icon,
     ["text-" + props.variant]: props.variant,
     ["bg-" + props.bgVariant]: props.bgVariant,
