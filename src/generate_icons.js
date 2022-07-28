@@ -9,10 +9,6 @@ const iconWritePath = path.resolve(__dirname + "/components/");
 let iconExports = [];
 const baseIcon = fs.readFileSync(path.resolve(__dirname + "/shared/BaseIcon.vue")).toString();
 
-
-function isNumber(val) {
-    return !isNaN(val);
-}
 function startsWithNumber(str) {
     return /^\d/.test(str);
 }
@@ -54,4 +50,31 @@ function generateSvg() {
     console.info(iconExports.length + " icons exported in src/index.ts");
 }
 
+function generateByNames() {
+    let names = fs.readdirSync(directory)
+        .filter(i => i.endsWith(".svg"))
+        .map(i => "'" + i.replace(".svg", "") + "'");
+
+    fs.writeFileSync(path.resolve(__dirname + "/types/names.d.ts"), "export type Icons \n\t= " + names.join("\n\t| "));
+    console.log(names.length + " icons names generated");
+    fs.copyFile(
+        path.resolve(__dirname + "/shared/Bi.vue"),
+        path.resolve(__dirname + "/components/Bi.vue"),
+        (err) => {
+            if (err) throw err;
+            console.log('Bi.vue component copied to /components');
+        }
+    );
+
+    try {
+        fs.appendFileSync(
+            path.resolve(__dirname + "/index.ts"),
+            '\n//Bootstrap Common Icon Component\nexport {default as Bi} from "./components/Bi.vue";'
+        );
+    } catch (err) {
+        console.error(err)
+    }
+}
+
 generateSvg();
+generateByNames();

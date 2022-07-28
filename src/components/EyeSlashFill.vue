@@ -6,9 +6,10 @@
 </template>
 
 <script lang="ts" setup>
-import {props, sizeHeight, sizeWidth} from "../shared/useSetup";
+import {props as rawProps, sizeWidth, sizeHeight} from "../shared/useSetup";
 import {computed} from "vue";
 
+const props = defineProps(rawProps);
 const classes = computed(() => [
     "bi bi-eye-slash-fill",
     {

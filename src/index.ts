@@ -1809,3 +1809,5 @@ export {default as YinYang} from "./components/YinYang.vue";
 export {default as Youtube} from "./components/Youtube.vue";
 export {default as ZoomIn} from "./components/ZoomIn.vue";
 export {default as ZoomOut} from "./components/ZoomOut.vue";
+//Bootstrap Common Icon Component
+export {default as Bi} from "./components/Bi.vue";
