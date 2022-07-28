@@ -5,10 +5,41 @@
 </template>
 
 <script lang="ts" setup>
-import {props as rawProps, sizeWidth, sizeHeight} from "../shared/useSetup";
-import {computed} from "vue";
+import {computed, PropType} from "vue";
+import {ColorVariants} from "../types";
 
-const props = defineProps(rawProps);
+const props = defineProps({
+    width: {
+        type: [Number, String] as PropType<number | string>,
+        default: () => 16
+    },
+    height: {
+        type: [Number, String] as PropType<number | string>,
+        default: () => 16
+    },
+    size: {
+        type: Number as PropType<number>,
+        default: () => 1
+    },
+    variant: {
+        type: String as PropType<ColorVariants>,
+        default: null
+    },
+    bgVariant: {
+        type: String as PropType<ColorVariants>,
+        default: null
+    },
+    fill: {
+        type: String as PropType<string>,
+        default: () => "currentColor"
+    },
+    spin: {
+        type: Boolean as PropType<boolean>,
+        default: false
+    }
+});
+const sizeWidth = computed(() => Number(props.width) * Number(props.size));
+const sizeHeight = computed(() => Number(props.height) * Number(props.size));
 const classes = computed(() => [
     "bi bi-brightness-low",
     {

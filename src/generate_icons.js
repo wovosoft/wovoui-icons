@@ -55,8 +55,14 @@ function generateByNames() {
         .filter(i => i.endsWith(".svg"))
         .map(i => "'" + i.replace(".svg", "") + "'");
 
+    fs.writeFileSync(
+        path.resolve(__dirname + "/assets/names_list.js"),
+        "export default " + JSON.stringify(names.map(i => i.slice(1, i.length - 1)))
+    );
     fs.writeFileSync(path.resolve(__dirname + "/types/names.d.ts"), "export type Icons \n\t= " + names.join("\n\t| "));
+
     console.log(names.length + " icons names generated");
+
     fs.copyFile(
         path.resolve(__dirname + "/shared/Bi.vue"),
         path.resolve(__dirname + "/components/Bi.vue"),
