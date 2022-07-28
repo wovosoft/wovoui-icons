@@ -7,8 +7,6 @@
     <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Testing Shell">
       <change beforePath="$PROJECT_DIR$/.github/workflows/npm-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/npm-publish.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publish.sh" beforeDir="false" afterPath="$PROJECT_DIR$/publish.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658918635429</updated>
       <workItem from="1658918638274" duration="4214000" />
-      <workItem from="1658982915438" duration="1684000" />
+      <workItem from="1658982915438" duration="1804000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658922819230</created>
@@ -91,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658986493817</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Testing Shell">
+      <created>1658986620458</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1658986620458</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
