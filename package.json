@@ -6,8 +6,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "generate:icons": "node src/generate_icons.js",
-    "publish": "node publish.js"
+    "generate:icons": "node src/generate_icons.js"
   },
   "dependencies": {
     "vue": "^3.2.25"
