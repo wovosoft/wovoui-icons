@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Updated">
-      <change afterPath="$PROJECT_DIR$/publish.sh" afterDir="false" />
+    <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Testing Shell">
       <change beforePath="$PROJECT_DIR$/.github/workflows/npm-publish.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/npm-publish.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658918635429</updated>
       <workItem from="1658918638274" duration="4214000" />
-      <workItem from="1658982915438" duration="1519000" />
+      <workItem from="1658982915438" duration="1580000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658922819230</created>
@@ -77,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658922819230</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Testing Shell">
+      <created>1658986433935</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1658986433935</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -96,6 +100,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated" />
+    <MESSAGE value="Testing Shell" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing Shell" />
   </component>
 </project>
