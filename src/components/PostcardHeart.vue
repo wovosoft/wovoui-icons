@@ -1,0 +1,32 @@
+<template>
+    <svg xmlns="http://www.w3.org/2000/svg" :width="sizeWidth" :height="sizeHeight" :fill="fill" :class="classes" viewBox="0 0 16 16">
+  <path d="M8 4.5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0v-7Zm3.5.878c1.482-1.42 4.795 1.392 0 4.622-4.795-3.23-1.482-6.043 0-4.622ZM2.5 5a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3Z"/>
+  <path fill-rule="evenodd" d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2Z"/>
+</svg>
+</template>
+
+<script lang="ts" setup>
+import {props, sizeHeight, sizeWidth} from "../shared/useSetup";
+import {computed} from "vue";
+
+const classes = computed(() => [
+    "bi bi-postcard-heart",
+    {
+        ["text-" + props.variant]: props.variant,
+        ["bg-" + props.bgVariant]: props.bgVariant,
+        "spin-icon": props.spin
+    }
+]);
+</script>
+
+<style>
+@keyframes spin-animation {
+    to {
+        transform: rotate(360deg) /* rtl:ignore */;
+    }
+}
+
+.spin-icon {
+    animation: 0.75s linear infinite spin-animation;
+}
+</style>

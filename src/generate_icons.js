@@ -13,6 +13,9 @@ const baseIcon = fs.readFileSync(path.resolve(__dirname + "/shared/BaseIcon.vue"
 function isNumber(val) {
     return !isNaN(val);
 }
+function startsWithNumber(str) {
+    return /^\d/.test(str);
+}
 
 function generateAndWriteIcon(icon) {
     const iconName = upperFirst(camelCase(icon.replace(".svg", "")));
@@ -27,7 +30,7 @@ function generateAndWriteIcon(icon) {
         .replace('width="16"', ':width="sizeWidth"')
         .replace('height="16"', ':height="sizeHeight"');
 
-    iconExports.push('export {default as ' + (isNumber(iconName) ? "_" : "") + iconName + '} from "./components/' + iconName + '.vue";');
+    iconExports.push('export {default as ' + (startsWithNumber(iconName) ? "_" : "") + iconName + '} from "./components/' + iconName + '.vue";');
 
     try {
         fs.writeFileSync([iconWritePath, iconName].join("/") + ".vue", theIcon);
