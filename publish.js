@@ -1,1 +1,1 @@
-console.log(process.env.NODE_AUTH_TOKEN)
+console.log(process.env)
