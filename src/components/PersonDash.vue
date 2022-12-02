@@ -1,44 +1,34 @@
 <template>
     <svg xmlns="http://www.w3.org/2000/svg" :width="sizeWidth" :height="sizeHeight" :fill="fill" :class="classes" viewBox="0 0 16 16">
-  <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-  <path fill-rule="evenodd" d="M11 7.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z"/>
+  <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7ZM11 12h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1 0-1Zm0-7a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+  <path d="M8.256 14a4.474 4.474 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10c.26 0 .507.009.74.025.226-.341.496-.65.804-.918C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4s1 1 1 1h5.256Z"/>
 </svg>
 </template>
 
 <script lang="ts" setup>
-import {computed, PropType} from "vue";
-import {ColorVariants} from "../types";
+import {computed} from "vue";
+import type {ColorVariants} from "../types";
 
-const props = defineProps({
-    width: {
-        type: [Number, String] as PropType<number | string>,
-        default: () => 16
-    },
-    height: {
-        type: [Number, String] as PropType<number | string>,
-        default: () => 16
-    },
-    size: {
-        type: Number as PropType<number>,
-        default: () => 1
-    },
-    variant: {
-        type: String as PropType<ColorVariants>,
-        default: null
-    },
-    bgVariant: {
-        type: String as PropType<ColorVariants>,
-        default: null
-    },
-    fill: {
-        type: String as PropType<string>,
-        default: () => "currentColor"
-    },
-    spin: {
-        type: Boolean as PropType<boolean>,
-        default: false
-    }
-});
+type IconProps = {
+    width?: number | string | null;
+    height?: number | string | null;
+    size?: number | null;
+    variant?: ColorVariants | null;
+    bgVariant?: ColorVariants | null;
+    fill?: string;
+    spin?: boolean;
+
+}
+
+const props = withDefaults(defineProps<IconProps>(), {
+    width: () => 16,
+    height: () => 16,
+    size: () => 1,
+    fill: () => 'currentColor',
+    spin: () => false,
+})
+
+
 const sizeWidth = computed(() => Number(props.width) * Number(props.size));
 const sizeHeight = computed(() => Number(props.height) * Number(props.size));
 const classes = computed(() => [

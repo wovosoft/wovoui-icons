@@ -1,13 +1,20 @@
-const path = require('path');
-const fs = require('fs');
-const camelCase = require("lodash/camelCase");
-const upperFirst = require("lodash/upperFirst");
+import {resolve,dirname} from "path"
+import {readFileSync, writeFileSync, readdirSync, copyFile, appendFileSync} from "fs";
+import {fileURLToPath} from "url";
 
-const directory = path.resolve(__dirname + "./../node_modules/bootstrap-icons/icons");
-const iconWritePath = path.resolve(__dirname + "/components/");
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const upperFirst = (string) => {
+    return string ? string.charAt(0).toUpperCase() + string.slice(1) : ''
+}
+
+const camelCase = str => str.trim().replace(/[-_\s]+(.)?/g, (_, c) => c ? c.toUpperCase() : '');
+
+const directory = resolve(__dirname + "./../node_modules/bootstrap-icons/icons");
+const iconWritePath = resolve(__dirname + "/components/");
 
 let iconExports = [];
-const baseIcon = fs.readFileSync(path.resolve(__dirname + "/shared/BaseIcon.vue")).toString();
+const baseIcon = readFileSync(resolve(__dirname + "/shared/BaseIcon.vue")).toString();
 
 function startsWithNumber(str) {
     return /^\d/.test(str);
@@ -15,7 +22,7 @@ function startsWithNumber(str) {
 
 function generateAndWriteIcon(icon) {
     const iconName = upperFirst(camelCase(icon.replace(".svg", "")));
-    const iconContent = fs.readFileSync(path.resolve(directory + "/" + icon)).toString();
+    const iconContent = readFileSync(resolve(directory + "/" + icon)).toString();
 
     let theIcon = baseIcon
         .replace("<!--CONTENT-->", iconContent)
@@ -29,21 +36,21 @@ function generateAndWriteIcon(icon) {
     iconExports.push('export {default as ' + (startsWithNumber(iconName) ? "_" : "") + iconName + '} from "./components/' + iconName + '.vue";');
 
     try {
-        fs.writeFileSync([iconWritePath, iconName].join("/") + ".vue", theIcon);
+        writeFileSync([iconWritePath, iconName].join("/") + ".vue", theIcon);
     } catch (err) {
         console.error(err)
     }
 }
 
 function generateSvg() {
-    fs.readdirSync(directory)
+    readdirSync(directory)
         .filter(i => i.endsWith(".svg"))
         .forEach(icon => generateAndWriteIcon(icon));
 
     console.info(iconExports.length + " icons generated successfully.");
 
-    fs.writeFileSync(
-        path.resolve(__dirname + '/index.ts'),
+    writeFileSync(
+        resolve(__dirname + '/index.ts'),
         iconExports.join("\n")
     );
 
@@ -51,21 +58,21 @@ function generateSvg() {
 }
 
 function generateByNames() {
-    let names = fs.readdirSync(directory)
+    let names = readdirSync(directory)
         .filter(i => i.endsWith(".svg"))
         .map(i => "'" + i.replace(".svg", "") + "'");
 
-    fs.writeFileSync(
-        path.resolve(__dirname + "/assets/names_list.js"),
+    writeFileSync(
+        resolve(__dirname + "/assets/names_list.js"),
         "export default " + JSON.stringify(names.map(i => i.slice(1, i.length - 1)))
     );
-    fs.writeFileSync(path.resolve(__dirname + "/types/names.d.ts"), "export type Icons \n\t= " + names.join("\n\t| "));
+    writeFileSync(resolve(__dirname + "/types/names.d.ts"), "export type Icons \n\t= " + names.join("\n\t| "));
 
     console.log(names.length + " icons names generated");
 
-    fs.copyFile(
-        path.resolve(__dirname + "/shared/Bi.vue"),
-        path.resolve(__dirname + "/components/Bi.vue"),
+    copyFile(
+        resolve(__dirname + "/shared/Bi.vue"),
+        resolve(__dirname + "/components/Bi.vue"),
         (err) => {
             if (err) throw err;
             console.log('Bi.vue component copied to /components');
@@ -73,8 +80,8 @@ function generateByNames() {
     );
 
     try {
-        fs.appendFileSync(
-            path.resolve(__dirname + "/index.ts"),
+        appendFileSync(
+            resolve(__dirname + "/index.ts"),
             '\n//Bootstrap Common Icon Component\nexport {default as Bi} from "./components/Bi.vue";'
         );
     } catch (err) {

@@ -9,39 +9,29 @@
 </template>
 
 <script lang="ts" setup>
-import {computed, PropType} from "vue";
-import {ColorVariants} from "../types";
+import {computed} from "vue";
+import type {ColorVariants} from "../types";
 
-const props = defineProps({
-    width: {
-        type: [Number, String] as PropType<number | string>,
-        default: () => 16
-    },
-    height: {
-        type: [Number, String] as PropType<number | string>,
-        default: () => 16
-    },
-    size: {
-        type: Number as PropType<number>,
-        default: () => 1
-    },
-    variant: {
-        type: String as PropType<ColorVariants>,
-        default: null
-    },
-    bgVariant: {
-        type: String as PropType<ColorVariants>,
-        default: null
-    },
-    fill: {
-        type: String as PropType<string>,
-        default: () => "currentColor"
-    },
-    spin: {
-        type: Boolean as PropType<boolean>,
-        default: false
-    }
-});
+type IconProps = {
+    width?: number | string | null;
+    height?: number | string | null;
+    size?: number | null;
+    variant?: ColorVariants | null;
+    bgVariant?: ColorVariants | null;
+    fill?: string;
+    spin?: boolean;
+
+}
+
+const props = withDefaults(defineProps<IconProps>(), {
+    width: () => 16,
+    height: () => 16,
+    size: () => 1,
+    fill: () => 'currentColor',
+    spin: () => false,
+})
+
+
 const sizeWidth = computed(() => Number(props.width) * Number(props.size));
 const sizeHeight = computed(() => Number(props.height) * Number(props.size));
 const classes = computed(() => [
