@@ -15,6 +15,7 @@
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@babel/types": "^7.20.7",
     "@types/node": "^18.11.10",
     "@vitejs/plugin-vue": "^2.3.4",
     "bootstrap-icons": "^1.10.2",
@@ -22,8 +23,7 @@
     "vue-tsc": "^1.0.24"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "types": "./dist/index.d.ts",
   "description": "Bootstrap Icons in Vue 3",
