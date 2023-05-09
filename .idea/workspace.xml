@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Testing Shell">
-      <change beforePath="$PROJECT_DIR$/src/shared/0Circle.vue.d.ts.map" beforeDir="false" />
-    </list>
+    <list default="true" id="4a4ee676-7ae7-4eb9-8078-0b84775928fc" name="Changes" comment="Testing Shell" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,9 +17,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript File" />
-        <option value="Vue Single File Component" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -86,7 +84,7 @@
       <workItem from="1659005024416" duration="400000" />
       <workItem from="1659005555737" duration="12000" />
       <workItem from="1669970569584" duration="4993000" />
-      <workItem from="1669975690955" duration="1170000" />
+      <workItem from="1669975690955" duration="1482000" />
     </task>
     <task id="LOCAL-00001" summary="Updated">
       <created>1658922819230</created>

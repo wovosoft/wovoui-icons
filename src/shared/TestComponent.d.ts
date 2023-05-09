@@ -1,6 +1,7 @@
-import type { ColorVariants } from "../types";
+import type {ColorVariants} from "../types";
+
 declare const _default: {
-    new (...args: any[]): {
+    new(...args: any[]): {
         $: import("vue").ComponentInternalInstance;
         $data: {};
         $props: Partial<{
@@ -131,4 +132,3 @@ type __VLS_WithDefaults<P, D> = {
         default: D[K];
     } : P[K];
 };
-//# sourceMappingURL=0Circle.vue.d.ts.map

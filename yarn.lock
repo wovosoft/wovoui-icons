@@ -107,10 +107,10 @@
   "resolved" "https://registry.npmjs.org/@vue/shared/-/shared-3.2.45.tgz"
   "version" "3.2.45"
 
-"bootstrap-icons@^1.10.2":
-  "integrity" "sha512-PTPYadRn1AMGr+QTSxe4ZCc+Wzv9DGZxbi3lNse/dajqV31n2/wl/7NX78ZpkvFgRNmH4ogdIQPQmxAfhEV6nA=="
-  "resolved" "https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.10.2.tgz"
-  "version" "1.10.2"
+"bootstrap-icons@^1.10.5":
+  "integrity" "sha512-oSX26F37V7QV7NCE53PPEL45d7EGXmBgHG3pDpZvcRaKVzWMqIRL9wcqJUyEha1esFtM3NJzvmxFXDxjJYD0jQ=="
+  "resolved" "https://registry.npmjs.org/bootstrap-icons/-/bootstrap-icons-1.10.5.tgz"
+  "version" "1.10.5"
 
 "csstype@^2.6.8":
   "integrity" "sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w=="
