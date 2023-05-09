@@ -1,37 +1,39 @@
 {
   "name": "@wovosoft/wovoui-icons",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:icons  && vite build && npm run generate:types",
+    "build": "vite build && npm run generate:types",
+    "build:tsc": "vite build && npm run generate:tsc_types",
     "preview": "vite preview",
     "generate:icons": "node src/generate_icons.js",
-    "generate:types": "node src/copyTypes.js"
+    "generate:types": "node src/copyTypes.js",
+    "generate:tsc_types": "vue-tsc --declaration --emitDeclarationOnly --outdir ./dist"
   },
   "dependencies": {
     "bootstrap-icons": "^1.10.5",
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "@babel/types": "^7.20.7",
     "@types/node": "^18.11.10",
-    "@vitejs/plugin-vue": "^2.3.4",
-    "vite": "^2.9.15"
+    "@vitejs/plugin-vue": "^2.3.4"
   },
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
-  "typings": "./dist/index.d.ts",
+  "types": "./dist/index.d.ts",
   "description": "Bootstrap Icons in Vue 3",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/index.umd.mjs",
+  "module": "./dist/index.es.mjs",
   "exports": {
-    "./src/index": "./src/index.ts",
-    "./dist/style": "./dist/style.css",
+    "./src/index": "./src/index.mjs",
+    "./dist/style.css": "./dist/style.css",
+    "./types": "./dist/types/index.d.ts",
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": "./dist/index.es.mjs",
+      "require": "./dist/index.umd.mjs"
     }
   },
   "author": "Narayan Adhikary",

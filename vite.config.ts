@@ -2,26 +2,27 @@ import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import path from "path";
 
-// https://vitejs.dev/config/
+/** @type {import('vite').UserConfig} */
 export default defineConfig({
     plugins: [
-        vue(),
+        vue({}),
     ],
     build: {
         cssCodeSplit: false,
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
             name: 'wovoui-icons',
-            fileName: (format) => `index.${format}.js`
+            fileName: (format) => `[name].${format}.mjs`
         },
         rollupOptions: {
-            external: ['vue'],
+            external: ['vue', 'axios'],
             // input: {
             //     demo: path.resolve(__dirname, 'docs/app.ts')
             // },
             output: {
                 globals: {
-                    vue: 'Vue'
+                    vue: 'Vue',
+                    axios: 'axios'
                 }
             }
         }
