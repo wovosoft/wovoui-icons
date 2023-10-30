@@ -1,6 +1,8 @@
 <template>
     <svg xmlns="http://www.w3.org/2000/svg" :width="sizeWidth" :height="sizeHeight" :fill="fill" :class="classes" viewBox="0 0 16 16">
-  <path d="M7.648 13V3H6.3v4.234H1.348V3H0v10h1.348V8.421H6.3V13h1.348ZM14 13V3h-1.333l-2.381 1.766V6.12L12.6 4.443h.066V13H14Z"/>
+  <path d="M6.5 9.5v-2h.214a.5.5 0 0 0 .5-.5v-.5h2.572V7a.5.5 0 0 0 .5.5h.214v2h-4Z"/>
+  <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .5.5V4h13.5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5H2v2.5a.5.5 0 0 1-1 0V2H.5a.5.5 0 0 1-.5-.5Zm6.714 4a.5.5 0 0 0-.5.5v.5H6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5V7a.5.5 0 0 0-.5-.5h-.214V6a.5.5 0 0 0-.5-.5H6.714Z"/>
+  <path d="M3 12.5h3.5v1a.5.5 0 0 1-.5.5H3.5a.5.5 0 0 1-.5-.5v-1Zm8 0H7v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Z"/>
 </svg>
 </template>
 
@@ -31,7 +33,7 @@ const props = withDefaults(defineProps<IconProps>(), {
 const sizeWidth = computed(() => Number(props.width) * Number(props.size));
 const sizeHeight = computed(() => Number(props.height) * Number(props.size));
 const classes = computed(() => [
-    "bi bi-type-h1",
+    "bi bi-pci-card-network",
     {
         ["text-" + props.variant]: props.variant,
         ["bg-" + props.bgVariant]: props.bgVariant,

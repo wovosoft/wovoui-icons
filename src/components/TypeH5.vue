@@ -1,6 +1,6 @@
 <template>
     <svg xmlns="http://www.w3.org/2000/svg" :width="sizeWidth" :height="sizeHeight" :fill="fill" :class="classes" viewBox="0 0 16 16">
-  <path d="M7.648 13V3H6.3v4.234H1.348V3H0v10h1.348V8.421H6.3V13h1.348ZM14 13V3h-1.333l-2.381 1.766V6.12L12.6 4.443h.066V13H14Z"/>
+  <path d="M9 10.516h1.264c.193.976 1.112 1.364 2.01 1.364 1.005 0 2.067-.782 2.067-2.247 0-1.292-.983-2.082-2.089-2.082-1.012 0-1.658.596-1.924 1.077h-1.12L9.646 3h5.535v1.141h-4.415L10.5 7.28h.072c.201-.316.883-.84 1.967-.84 1.709 0 3.13 1.177 3.13 3.158 0 2.025-1.407 3.403-3.475 3.403-1.809 0-3.1-1.048-3.194-2.484ZM7.495 13V3.201H6.174v4.15H1.32V3.2H0V13h1.32V8.512h4.854V13h1.32Z"/>
 </svg>
 </template>
 
@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<IconProps>(), {
 const sizeWidth = computed(() => Number(props.width) * Number(props.size));
 const sizeHeight = computed(() => Number(props.height) * Number(props.size));
 const classes = computed(() => [
-    "bi bi-type-h1",
+    "bi bi-type-h5",
     {
         ["text-" + props.variant]: props.variant,
         ["bg-" + props.bgVariant]: props.bgVariant,

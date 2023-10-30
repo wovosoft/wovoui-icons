@@ -1,60 +1,61 @@
 {
-  "name": "@wovosoft/wovoui-icons",
-  "version": "1.1.9",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build && npm run generate:types",
-    "build:tsc": "vite build && npm run generate:tsc_types",
-    "preview": "vite preview",
-    "generate:icons": "node src/generate_icons.js",
-    "generate:types": "node src/copyTypes.js",
-    "generate:tsc_types": "vue-tsc --declaration --emitDeclarationOnly --outdir ./dist"
-  },
-  "dependencies": {
-    "bootstrap-icons": "^1.10.5",
-    "vue": "^3.2.45"
-  },
-  "devDependencies": {
-    "@babel/types": "^7.20.7",
-    "@types/node": "^18.11.10",
-    "@vitejs/plugin-vue": "^2.3.4"
-  },
-  "files": [
-    "dist"
-  ],
-  "types": "./dist/index.d.ts",
-  "description": "Bootstrap Icons in Vue 3",
-  "main": "./dist/index.umd.mjs",
-  "module": "./dist/index.es.mjs",
-  "exports": {
-    "./src/index": "./src/index.mjs",
-    "./dist/style.css": "./dist/style.css",
-    "./types": "./dist/types/index.d.ts",
-    ".": {
-      "import": "./dist/index.es.mjs",
-      "require": "./dist/index.umd.mjs"
+    "name": "@wovosoft/wovoui-icons",
+    "version": "1.1.9",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build && npm run generate:types",
+        "build:tsc": "vite build && npm run generate:tsc_types",
+        "preview": "vite preview",
+        "generate:icons": "node src/generate_icons.js",
+        "generate:types": "node src/copyTypes.js",
+        "generate:tsc_types": "vue-tsc --declaration --emitDeclarationOnly --outdir ./dist"
+    },
+    "dependencies": {
+        "bootstrap-icons": "^1.11.1",
+        "vue": "^3.2.45"
+    },
+    "devDependencies": {
+        "@babel/types": "^7.20.7",
+        "@types/node": "^18.11.10",
+        "@vitejs/plugin-vue": "^2.3.4",
+        "vite": "^4.5.0"
+    },
+    "files": [
+        "dist"
+    ],
+    "types": "./dist/index.d.ts",
+    "description": "Bootstrap Icons in Vue 3",
+    "main": "./dist/index.umd.mjs",
+    "module": "./dist/index.es.mjs",
+    "exports": {
+        "./src/index": "./src/index.mjs",
+        "./dist/style.css": "./dist/style.css",
+        "./types": "./dist/types/index.d.ts",
+        ".": {
+            "import": "./dist/index.es.mjs",
+            "require": "./dist/index.umd.mjs"
+        }
+    },
+    "author": "Narayan Adhikary",
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wovosoft/wovoui-icons.git"
+    },
+    "keywords": [
+        "Bootstrap 5",
+        "Icons",
+        "Vue 3",
+        "wovoui",
+        "wovoui-icons"
+    ],
+    "bugs": {
+        "url": "https://github.com/wovosoft/wovoui-icons/issues"
+    },
+    "homepage": "https://github.com/wovosoft/wovoui-icons#readme",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
     }
-  },
-  "author": "Narayan Adhikary",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wovosoft/wovoui-icons.git"
-  },
-  "keywords": [
-    "Bootstrap 5",
-    "Icons",
-    "Vue 3",
-    "wovoui",
-    "wovoui-icons"
-  ],
-  "bugs": {
-    "url": "https://github.com/wovosoft/wovoui-icons/issues"
-  },
-  "homepage": "https://github.com/wovosoft/wovoui-icons#readme",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  }
 }
