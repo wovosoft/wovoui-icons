@@ -53,6 +53,11 @@ function generateTypes() {
     }
 
     console.log("Basic Type definitions generated");
+
+    copyFileSync(
+        resolve(__dirname + "/index.ts"),
+        resolve(__dirname + "/../dist/index.d.ts"),
+    );
 }
 
 generateTypes();
