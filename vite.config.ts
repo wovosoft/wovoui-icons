@@ -8,13 +8,15 @@ export default defineConfig({
         vue({}),
     ],
     build: {
+        sourcemap: true,
         cssCodeSplit: false,
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
             name: 'wovoui-icons',
+            formats: ['es'],
             fileName: (format) => `[name].${format}.mjs`
         },
-        rollupOptions: {
+        rolldownOptions: {
             external: ['vue', 'axios'],
             // input: {
             //     demo: path.resolve(__dirname, 'docs/app.ts')
