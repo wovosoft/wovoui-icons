@@ -4,20 +4,20 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run generate:types",
-    "build:tsc": "vite build && npm run generate:tsc_types",
+    "build": "vite build && bun run generate:types",
+    "build:tsc": "vite build && bun run generate:tsc_types",
     "preview": "vite preview",
     "generate:icons": "node src/generate_icons.js",
     "generate:types": "node src/copyTypes.js",
     "generate:tsc_types": "vue-tsc --declaration --emitDeclarationOnly --outdir ./dist"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.11.1",
-    "vue": "^3.2.45"
+    "bootstrap-icons": "^1.13.1",
+    "vue": "^3.5.39"
   },
   "devDependencies": {
-    "@babel/types": "^7.20.7",
-    "@types/node": "^18.11.10",
+    "@babel/types": "^7.29.7",
+    "@types/node": "^18.19.130",
     "@vitejs/plugin-vue": "^6.0.7",
     "typescript": "^5.9.3",
     "vite": "^8.1.3",
@@ -27,13 +27,17 @@
     "dist",
     "src"
   ],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "types": "./dist/index.d.ts",
   "description": "Bootstrap Icons in Vue 3",
   "main": "./dist/index.es.mjs",
   "module": "./dist/index.es.mjs",
   "exports": {
     "./src/index": "./src/index.ts",
-    "./dist/style.css": "./dist/style.css",
+    "./dist/style.css": "./dist/wovoui-icons.css",
+    "./dist/wovoui-icons.css": "./dist/wovoui-icons.css",
     "./types": "./dist/index.d.ts",
     ".": {
       "import": "./dist/index.es.mjs",
