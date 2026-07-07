@@ -1,0 +1,9 @@
+@keyframes spin-animation {
+  to {
+    transform: rotate(360deg) /* rtl:ignore */;
+  }
+}
+
+.spin-icon {
+  animation: 0.75s linear infinite spin-animation;
+}

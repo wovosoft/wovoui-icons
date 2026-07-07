@@ -1,6 +1,6 @@
 {
   "name": "@wovosoft/wovoui-icons",
-  "version": "1.1.14",
+  "version": "1.1.13",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -28,6 +28,7 @@
     "src"
   ],
   "sideEffects": [
+    "*.css",
     "**/*.css"
   ],
   "types": "./dist/index.d.ts",
@@ -42,6 +43,7 @@
       "import": "./dist/components/*.mjs",
       "types": "./dist/components/*.d.ts"
     },
+    "./style.css": "./dist/wovoui-icons.css",
     "./dist/wovoui-icons.css": "./dist/wovoui-icons.css"
   },
   "description": "Bootstrap Icons in Vue 3",

@@ -1,0 +1,3 @@
+import { createIcon } from '../createIcon'
+
+export default /*@__PURE__*/createIcon("<path d=\"M8 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4m0 3a1 1 0 1 1 0-2 1 1 0 0 1 0 2\"/>\n  <path d=\"M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0\"/>", 'bi-vinyl-fill')

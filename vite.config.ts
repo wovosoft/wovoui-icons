@@ -7,8 +7,12 @@ export default defineConfig({
     build: {
         sourcemap: true,
         cssCodeSplit: false,
+        lib: {
+            entry: path.resolve(__dirname, 'src/index.ts'),
+            formats: ['es'],
+            fileName: () => 'index.mjs',
+        },
         rolldownOptions: {
-            input: path.resolve(__dirname, 'src/index.ts'),
             external: ['vue'],
             output: {
                 preserveModules: true,
