@@ -31,19 +31,20 @@
     "**/*.css"
   ],
   "types": "./dist/index.d.ts",
-  "description": "Bootstrap Icons in Vue 3",
-  "main": "./dist/index.es.mjs",
-  "module": "./dist/index.es.mjs",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "exports": {
-    "./src/index": "./src/index.ts",
-    "./dist/style.css": "./dist/wovoui-icons.css",
-    "./dist/wovoui-icons.css": "./dist/wovoui-icons.css",
-    "./types": "./dist/index.d.ts",
     ".": {
-      "import": "./dist/index.es.mjs",
+      "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts"
-    }
+    },
+    "./components/*": {
+      "import": "./dist/components/*.mjs",
+      "types": "./dist/components/*.d.ts"
+    },
+    "./dist/wovoui-icons.css": "./dist/wovoui-icons.css"
   },
+  "description": "Bootstrap Icons in Vue 3",
   "author": "Narayan Adhikary",
   "license": "ISC",
   "repository": {
